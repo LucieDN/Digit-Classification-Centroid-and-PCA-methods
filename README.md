@@ -445,7 +445,6 @@ for n_component = 1:max_n_component
     x = b(n_component).XEndPoints; % x positions for group 1 bars
     y = b(n_component).YEndPoints; % y positions for group 1 bars
     legend_names{1,n_component} = string(n_component + " components");
-    text(x, y/2, string(round(acc_centroid,2)), 'HorizontalAlignment','center', 'VerticalAlignment','bottom', 'FontSize', 7);
 end
 
 legend_names{1,1} = "1 component";
