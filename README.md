@@ -34,7 +34,7 @@ Each variable contains a matrix of images for a specific digit. Each row corresp
 
 The centroid method computes the average image of each digit class and classifies a new image by the nearest average in Euclidean space.
 
- $$ \hat{y} =\arg \min_k \|z-\mu_k {\|}_2 $$ 
+ $$ \hat{y} =\arg \min_k {\|\|} z-\mu_k {\|\|}_2 $$ 
 
 where $z$ is the test image and $\mu_k$ is the mean image of digit $k$.
 
@@ -55,14 +55,14 @@ The PCA computes a low\-dimensional basis (principal components) for each digit 
 
 Each test digit is projected into each digit's subspace, and classification is based on reconstruction error:
 
- $$ \hat{y} =\arg \min_k \|z-U_k U_k^T z{\|}_2 $$ 
+ $$ \hat{y} =\arg \min_k {\|\|}z-U_k U_k^T z{\|\|}_2 $$ 
 
 where $U_k$ contains the top principal components for digit $k$.
 
 
 **Advantages**:
 
--  REduce noise and dimensionality 
+-  Reduces noise and dimensionality 
 -  Captures dominant variation accros samples 
 
 **Limitations**
